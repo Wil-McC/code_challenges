@@ -10,13 +10,13 @@
 # end
 # assumption: max possible common prefix limited to length of shortest word
 
-strs = ["flower","flow","flight"]
+strs = ["glower","tips","sour"]
 
 def longest_common_prefix(strs)
   acc = ""
   count = 0
-  letter = strs.first[count]
   while count < strs.first.length
+    letter = strs.first[count]
     if strs.all? do |elem|
         elem[count] == letter
       end
