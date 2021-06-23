@@ -17,8 +17,16 @@ def longest_common_prefix(strs)
   count = 0
   letter = strs.first[count]
   while count < strs.first.length
-
+    if strs.all? do |elem|
+        elem[count] == letter
+      end
+      acc += letter
+      count += 1
+    else
+      break
+    end
   end
+  acc
 end
 
 p longest_common_prefix(strs)
