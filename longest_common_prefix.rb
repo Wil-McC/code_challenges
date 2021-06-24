@@ -17,9 +17,7 @@ def longest_common_prefix(strs)
   count = 0
   while count < strs.first.length
     letter = strs.first[count]
-    if strs.all? do |elem|
-        elem[count] == letter
-      end
+    if strs.all? { |elem| elem[count] == letter }
       acc += letter
       count += 1
     else
