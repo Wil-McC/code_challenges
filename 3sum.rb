@@ -13,6 +13,10 @@
 nums = [-1,0,1] # ,2,-1,-4]
 
 def three_sum(nums)
-
+  counter = 0
+  sum = 0
+  while sum == 0
+    num = nums[counter]
+  end
 
 end
