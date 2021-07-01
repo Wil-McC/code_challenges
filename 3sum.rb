@@ -9,6 +9,8 @@
 # check each in isolation against remaining
 # while sum == 0 AND length < 3, add numbers
 # add num when it is the negative value of the sum of another 2 nums
+#
+# us .uniq? and unique method to cut down final product? array of arrays
 
 nums = [-1,0,1] # ,2,-1,-4]
 
