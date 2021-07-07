@@ -10,7 +10,7 @@
 # end
 # assumption: max possible common prefix limited to length of shortest word
 
-strs = ["glower","tips","sour"]
+strs = ["glower","glops","glur"]
 
 def longest_common_prefix(strs)
   acc = ""

@@ -26,6 +26,11 @@
 
 nums = [-1,0,1,2,-1,-4]
 
-def three_sum(nums)
-  
+def get_zero_triplets(nums)
+  new = nums
+  nums.length.times do
+    num = new[0]
+  end
 end
+
+p get_zero_triplets(nums)
