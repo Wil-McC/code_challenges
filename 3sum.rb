@@ -12,13 +12,20 @@
 #
 # us .uniq? and unique method to cut down final product? array of arrays
 
-nums = [-1,0,1] # ,2,-1,-4]
+# counter = 0
+# sum = 0
+# while sum == 0
+#   num = nums[counter]
+# end
+
+# get first digit, put it into array
+# iterate through each possible combination in a logical fashion
+# if a + b = 1, find -(a+b)
+# if find x != nil, arr << x
+# call uniq on arr of arrs
+
+nums = [-1,0,1,2,-1,-4]
 
 def three_sum(nums)
-  counter = 0
-  sum = 0
-  while sum == 0
-    num = nums[counter]
-  end
-
+  
 end
