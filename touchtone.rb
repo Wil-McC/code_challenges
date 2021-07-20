@@ -1,6 +1,8 @@
 # return all possible combinations of symbolized letters
 # order does NOT matter
 
+# ASSUMING  - cannot use built-in .combinations method
+
 # all numbers 2..9 are associated with a set of 3-4 letters
 #all combinations where each key produces one of any of its letters
 
@@ -25,3 +27,15 @@ key_letters = {
 }
 
 # create collection, run down each iteration and toss all valid combos into acc
+# 
+
+def letter_combos(digits)
+  nums = digits.split('')
+  nums.flat_map do |num|
+
+  end
+end
+
+# simplest: one digit - 'abc'
+
+p letter_combos('2')
