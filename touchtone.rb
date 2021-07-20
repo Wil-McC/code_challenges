@@ -27,13 +27,15 @@ key_letters = {
 }
 
 # create collection, run down each iteration and toss all valid combos into acc
-# 
+# recursion
+# create collector
+# get combos of first two sets
+# if third set, while getting first two, check for depth (Depth First Search)
+# if deeper, call comparator function on second set and third, etc? 
 
 def letter_combos(digits)
   nums = digits.split('')
-  nums.flat_map do |num|
 
-  end
 end
 
 # simplest: one digit - 'abc'
