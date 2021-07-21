@@ -31,7 +31,7 @@ key_letters = {
 # create collector
 # get combos of first two sets
 # if third set, while getting first two, check for depth (Depth First Search)
-# if deeper, call comparator function on second set and third, etc? 
+# if deeper, call comparator function on second set and third, etc?
 
 def letter_combos(digits)
   nums = digits.split('')
