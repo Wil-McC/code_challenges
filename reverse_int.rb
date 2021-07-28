@@ -7,3 +7,9 @@
 
 # if 022, >> 22 -- remove LEADING zeros
 #
+
+x = 234
+
+def reverse_int(int)
+  
+end
