@@ -11,5 +11,7 @@
 x = 234
 
 def reverse_int(int)
-  
+  str = int.to_s
+  raw = str.split('')
+  raw.length.times do 
 end
