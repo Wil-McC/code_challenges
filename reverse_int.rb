@@ -12,6 +12,7 @@
 def reverse_int(int)
   str = int.to_s
   acc = ""
+  require "pry"; binding.pry
   if str[0] == '-'
     acc + '-'
     str = str[1..-1]
