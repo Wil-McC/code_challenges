@@ -20,9 +20,15 @@ def reverse_int(int)
   raw.length.times do
     acc += raw.pop
   end
-  acc.to_i
+  # scope_out(out)
+  out = acc.to_i
+  if out < -2 ** 31 || out > 2 ** 31 - 1
+    return 0
+  else
+    return out
+  end
 end
 
-x = 0
+x = 1534236469
 
 p reverse_int(x)
