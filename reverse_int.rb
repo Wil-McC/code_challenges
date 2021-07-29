@@ -6,23 +6,23 @@
 
 
 # if 022, >> 22 -- remove LEADING zeros
-#
+# [-2^31, 2^31 - 1]
 
 
 def reverse_int(int)
   str = int.to_s
   acc = ""
-  require "pry"; binding.pry
   if str[0] == '-'
-    acc + '-'
+    acc += '-'
     str = str[1..-1]
   end
   raw = str.split('')
   raw.length.times do
-    acc + raw.shift
+    acc += raw.pop
   end
+  acc.to_i
 end
 
-x = 234
+x = 0
 
 p reverse_int(x)
