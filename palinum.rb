@@ -22,15 +22,31 @@
 
 def is_palindrome(x)
   chars = x.to_s
-  # refout - negative_check; doesn't preserve out init abil?
-  if chars[0] == '-'
-    out = false
-  end
-  # do a flip!
 
+  if chars.length % 2 == 0
+    leg = chars.length / 2
+  elsif chars.length % 2 == 1
+    leg = (chars.length - 1) / 2
+  end
+
+  leg = chars.length / 2
+  offset = leg - 1
+  leg1 = chars[0..offset]
+  leg2 = chars[leg..-1]
+  test_leg = String.new
+
+  leg2.length.times do
+    test_leg += leg2[-1]
+    leg2 = leg2.chop
+  end
+
+  if chars[0] == '-'
+    return false
+  else
+    return leg1 == test_leg
+  end
 end
 
-x = -101
-# expect 'false'
+x = 10
 
 p is_palindrome(x)
