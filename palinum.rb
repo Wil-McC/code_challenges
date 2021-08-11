@@ -28,7 +28,7 @@ def is_palindrome(x)
     len = chars.length / 2
   elsif chars.length % 2 == 1
     len = (chars.length - 1) / 2
-    spo = chars[len]
+    # spo = chars[len]
   end
 
   # leg = chars.length / 2
