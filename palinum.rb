@@ -11,7 +11,7 @@
 #   - 202 ODD (3)
 #     * (len - 1) / 2 = one 'leg'
 #       - array position of center = -(leg + 1)
-#     * center digit can be disregarded - it is the 'spoke'
+#     * center digit can ***NOT NOT NOT*** be disregarded - it is the 'spoke'
 #   - 2552 EVEN (4)
 # =>  * leg = len / 2
 
@@ -19,6 +19,7 @@
 # read first leg against reverse of second leg
 
 # reverse = len.times do new_leg += leg2.pop
+
 
 def is_palindrome(x)
   chars = x.to_s
@@ -31,6 +32,7 @@ def is_palindrome(x)
 
   leg = chars.length / 2
   offset = leg - 1
+  # ^^ clean up
   leg1 = chars[0..offset]
   leg2 = chars[leg..-1]
   test_leg = String.new
