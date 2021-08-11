@@ -25,14 +25,15 @@ def is_palindrome(x)
   chars = x.to_s
 
   if chars.length % 2 == 0
-    leg = chars.length / 2
+    len = chars.length / 2
   elsif chars.length % 2 == 1
-    leg = (chars.length - 1) / 2
+    len = (chars.length - 1) / 2
+    spo = chars[len]
   end
 
-  leg = chars.length / 2
-  offset = leg - 1
-  # ^^ clean up
+  # leg = chars.length / 2
+  # offset = leg - 1
+
   leg1 = chars[0..offset]
   leg2 = chars[leg..-1]
   test_leg = String.new
