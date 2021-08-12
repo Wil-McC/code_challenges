@@ -28,14 +28,10 @@ def is_palindrome(x)
     len = chars.length / 2
   elsif chars.length % 2 == 1
     len = (chars.length - 1) / 2
-    # spo = chars[len]
   end
 
-  # leg = chars.length / 2
-  # offset = leg - 1
-
-  leg1 = chars[0..offset]
-  leg2 = chars[leg..-1]
+  leg1 = chars[0..(len - 1)]
+  leg2 = chars[-len..-1]
   test_leg = String.new
 
   leg2.length.times do
@@ -50,6 +46,6 @@ def is_palindrome(x)
   end
 end
 
-x = 10
+x = 121
 
 p is_palindrome(x)
