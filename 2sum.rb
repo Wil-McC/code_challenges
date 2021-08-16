@@ -10,11 +10,10 @@
 # discount all elements greater or equal to target
 
 def two_sum(nums, target)
-  # indices of nums that equal target - map?
-  clean = nums.select do |num|
-    num < target
-  end
-  
+  # clean = nums.select do |num|
+    # num < target
+  # end
+  # need to remember indice in original input
 end
 
 # expect [0, 1]
