@@ -10,10 +10,8 @@
 # discount all elements greater or equal to target
 
 def two_sum(nums, target)
-  # clean = nums.select do |num|
-    # num < target
-  # end
-  # need to remember indice in original input
+  # make a hash to link
+  nums.each_with_index do |item, index|
 end
 
 # expect [0, 1]
