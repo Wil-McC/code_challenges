@@ -16,7 +16,9 @@ def two_sum(nums, target)
     acc[index] = item
   end
   # if 2 sum to target, value of key added to accumulator
-  
+  nums.each do |num|
+
+  end
 end
 
 # expect [0, 1]
