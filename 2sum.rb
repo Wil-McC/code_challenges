@@ -7,11 +7,16 @@
 #   - one good answer in array
 #   - cannot repeat same element!
 
-# discount all elements greater or equal to target
+# discount all elements greater or equal to target - can't without losing index fidelity
 
 def two_sum(nums, target)
   # make a hash to link
+  acc = Hash.new
   nums.each_with_index do |item, index|
+    acc[index] = item
+  end
+  # if 2 sum to target, value of key added to accumulator
+  
 end
 
 # expect [0, 1]
