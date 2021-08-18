@@ -16,9 +16,10 @@ def two_sum(nums, target)
     acc[index] = item
   end
   # if 2 sum to target, value of key added to accumulator
-  nums.each do |num|
-
+  clean = acc.select do |k, v|
+    v < target
   end
+  require "pry"; binding.pry
 end
 
 # expect [0, 1]
