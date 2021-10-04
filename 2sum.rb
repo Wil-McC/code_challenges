@@ -28,10 +28,13 @@ def two_sum(nums, target)
   end
 
   if clean.sum == target
-    return 
-  # h.key(value) --> return key of value if present
-  c = 0
+    clean.map do |num|
+      acc.key(num)
+    end
+  else
+    # test and isolate
+  end
 end
 
-# expect [0, 1]
-p two_sum([2,7,11,15], 9)
+# expect [0, 2]
+p two_sum([2,11,7,15], 9)
