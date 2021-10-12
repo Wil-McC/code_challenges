@@ -32,7 +32,9 @@ def two_sum(nums, target)
       acc.key(num)
     end
   else
-    # test and isolate
+    c = 0
+    r = [0..clean.length]
+    clean[c]
   end
 end
 

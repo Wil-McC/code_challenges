@@ -18,8 +18,12 @@ def two_sum(nums, target)
        k
     end
   else
-    current_index = 0
-    proto =
+    acc = Array.new
+    # the loop is as follows:
+    # grab a num
+    # subtract it from the target
+    # use hash methods to check for matching value
+    # along the way (?) store indexes of success
   end
 
 end
