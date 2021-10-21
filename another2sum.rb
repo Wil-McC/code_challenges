@@ -12,7 +12,7 @@ def two_sum(nums, target)
   cleaned = h.select do |k, v|
     v < target
   end
-
+  # add check for specific correctness
   if cleaned.length == 2
     return cleaned.map do |k, v|
        k
@@ -24,6 +24,10 @@ def two_sum(nums, target)
     # subtract it from the target
     # use hash methods to check for matching value
     # along the way (?) store indexes of success
+
+    cleaned.each do |idx, val|
+      
+    end
   end
 
 end
