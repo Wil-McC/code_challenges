@@ -19,14 +19,13 @@ def two_sum(nums, target)
     end
   else
     acc = Array.new
-    # the loop is as follows:
     # grab a num
     # subtract it from the target
     # use hash methods to check for matching value
     # along the way (?) store indexes of success
 
-    cleaned.each do |idx, val|
-      
+    cleaned.values.each do |idx, val|
+      iso = target - val
     end
   end
 
