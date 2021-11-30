@@ -24,15 +24,21 @@ def two_sum(nums, target)
     # use hash methods to check for matching value
     # along the way (?) store indexes of success
 
-    cleaned.values.each do |idx, val|
+    cleaned.values.each do |val|
       iso = target - val
+      key = cleaned.key(iso)
+      require "pry"; binding.pry
+      if key
+        acc << cleaned.key(val)
+        acc << key
+      end
     end
   end
-
+  return acc
 end
 
-numbers = [1, 12, 9, 2]
-t       = 3
+numbers = [3, 2, 4]
+t       = 6
 
 p two_sum(numbers, t)
-# expect [0, 3]
+# expect [1, 2]
