@@ -19,20 +19,22 @@ def two_sum(nums, target)
     end
   else
     acc = Array.new
-    # grab a num
-    # subtract it from the target
-    # use hash methods to check for matching value
-    # along the way (?) store indexes of success
 
-    cleaned.values.each do |val|
-      iso = target - val
-      key = cleaned.key(iso)
-      require "pry"; binding.pry
-      if key
-        acc << cleaned.key(val)
-        acc << key
-      end
+    cleaned.each_with_index do |val, idx|
+
     end
+
+    # unless
+
+    # cleaned.values.each do |val|
+      # iso = target - val
+      # key = cleaned.key(iso)
+      # require "pry"; binding.pry
+      # if key
+        # acc << cleaned.key(val) unless
+        # acc << key
+      # end
+    # end
   end
   return acc
 end
