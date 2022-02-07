@@ -19,22 +19,17 @@ def two_sum(nums, target)
     end
   else
     acc = Array.new
+    # unless attempt
 
-    cleaned.each_with_index do |val, idx|
-
+     cleaned.values.each do |val|
+      iso = target - val
+      key = cleaned.key(iso)
+      require "pry"; binding.pry
+      if key
+        acc << cleaned.key(val) unless acc.include?(cleaned.key(val))
+        acc << key
+      end
     end
-
-    # unless
-
-    # cleaned.values.each do |val|
-      # iso = target - val
-      # key = cleaned.key(iso)
-      # require "pry"; binding.pry
-      # if key
-        # acc << cleaned.key(val) unless
-        # acc << key
-      # end
-    # end
   end
   return acc
 end
