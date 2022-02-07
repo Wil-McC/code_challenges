@@ -8,10 +8,17 @@ def find_the_difference(s, t)
 
   s_hash = hash_digest(s)
   t_hash = hash_digest(t)
-  require "pry"; binding.pry
-  t_hash.select do |k, v|
-    v - s_hash[k] == 1
-    return k
+
+  if s_hash.length != t_hash.length
+    # case for additional letter present in T, not in S
+    t_hash.select do |k, v|
+      !s_hash.include?(k)
+    end.keys.first
+  else
+    # case for when letter is more common in T than S
+    t_hash.select do |k, v|
+      v - s_hash[k] == 1
+    end.keys.first
   end
 end
 
@@ -24,8 +31,8 @@ def hash_digest(string)
   output_hash
 end
 
-string = 'abcd'
-test   = 'abcde'
+string = 'abcde'
+test   = 'abcede'
 # expect 'e'
 
 p find_the_difference(string, test)
