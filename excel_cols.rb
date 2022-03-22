@@ -12,4 +12,5 @@ def title_to_number(column_title)
   end
 end
 
+# expect 28
 puts title_to_number('AB')
