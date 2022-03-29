@@ -4,7 +4,7 @@ def two_sum(nums, target)
   # create hash to link original index position with values
   cleaned = Hash.new
   nums.each_with_index do |item, index|
-    if item < target
+    if item <= target
       cleaned[index] = item
     end
   end
