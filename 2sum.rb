@@ -1,7 +1,5 @@
 # given an array of integers, return the INDICES of the 2 numbers hwich add to target number
 
-#
-
 # IN - ( ARRAY of INT, target INT )
 # OUT - ARRAY of INDICES ***
 
@@ -26,12 +24,15 @@ def two_sum(nums, target)
 
   cleaned_hash.each do |k, v|
     check_hash = all_else(cleaned_hash, k)
+    
   end
 end
 
-def all_else(h, k)
-h.select do ||
+def all_else(h, outkey)
+  h.select do |key, val|
+    key != outkey
+  end
 end
 
 # expect [0, 2]
-p two_sum([2,11,7,15], 9)
+p two_sum([2,11,7,4,6,15], 9)
