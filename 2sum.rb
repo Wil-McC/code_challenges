@@ -10,32 +10,27 @@
 #   - one good answer in array
 #   - cannot repeat same element!
 
-# discount all elements greater or equal to target - can't without losing index fidelity
-
 def two_sum(nums, target)
-  # make a hash to link
-  acc = Hash.new
-  # build value - index linking hash to retain original indices
-  nums.each_with_index do |item, index|
-    acc[index] = item
-  end
-  # clean out numbers >= target to reduce complexity
-  # clean = acc.select do |k, v|
-  #   v < target
-  # end
-  clean = nums.select do |num|
-    num < target
+  index_map = Hash.new
+  nums.each_with_index do |itm, idx|
+    index_map[idx] = itm
   end
 
-  if clean.sum == target
-    clean.map do |num|
-      acc.key(num)
-    end
-  else
-    c = 0
-    r = [0..clean.length]
-    clean[c]
+  cleaned_hash = index_map.select do |k, v|
+    v <= target
   end
+
+  if cleaned_hash.length == 2 && cleaned_hash.values.sum == target
+    return cleaned_hash.values
+  end
+
+  cleaned_hash.each do |k, v|
+    check_hash = all_else(cleaned_hash, k)
+  end
+end
+
+def all_else(h, k)
+h.select do ||
 end
 
 # expect [0, 2]
