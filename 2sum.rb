@@ -10,37 +10,17 @@
 
 def two_sum(nums, target)
   index_map = Hash.new
-  nums.each_with_index do |itm, idx|
-    index_map[idx] = itm
-  end
 
-  cleaned_hash = index_map.select do |k, v|
-    v <= target
-  end
-
-  if cleaned_hash.length == 2 && cleaned_hash.values.sum == target
-    return cleaned_hash.values
-  end
-
-  out_arr = Array.new
-
-  cleaned_hash.each do |k, v|
-    check_hash = all_else(cleaned_hash, k)
-    check_hash.each do |ck, cv|
-      if v + cv == target
-        out_arr = [k, ck]
-      end
+  nums.each_with_index do |val, idx|
+    diff = target - val
+    if index_map[diff]
+      return [index_map[diff], idx]
+    else
+      index_map[val] = idx
     end
   end
-
-  return out_arr
 end
 
-def all_else(h, outkey)
-  h.select do |key, val|
-    key != outkey
-  end
-end
 
 # expect [0, 2]
-p two_sum([2,11,7,4,6,15], 13)
+p two_sum([-3,4,3,90], 0)
