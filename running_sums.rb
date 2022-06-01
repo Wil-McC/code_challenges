@@ -2,13 +2,11 @@
 # OUT: summed ARR
 
 def running_sum(nums)
-  out_arr = Array.new
   store   = 0
-  nums.each do |val|
-    store += val
-    out_arr << store
+  nums.map do |val|
+    val += store
+    store = val
   end
-  return out_arr
 end
 
 nums = [3,1,2,10,1]
