@@ -22,10 +22,18 @@ def two_sum(nums, target)
     return cleaned_hash.values
   end
 
+  out_arr = Array.new
+
   cleaned_hash.each do |k, v|
     check_hash = all_else(cleaned_hash, k)
-    
+    check_hash.each do |ck, cv|
+      if v + cv == target
+        out_arr = [k, ck]
+      end
+    end
   end
+
+  return out_arr
 end
 
 def all_else(h, outkey)
@@ -35,4 +43,4 @@ def all_else(h, outkey)
 end
 
 # expect [0, 2]
-p two_sum([2,11,7,4,6,15], 9)
+p two_sum([2,11,7,4,6,15], 13)
